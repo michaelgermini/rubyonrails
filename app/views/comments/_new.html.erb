@@ -1,0 +1,6 @@
+<%# app/views/comments/_new.html.erb %>
+<%= form_with(model: [@post, Comment.new], remote: true) do |form| %>
+  Your comment:<br>
+  <%= form.text_area :body, size: '50x20' %><br>
+  <%= form.submit %>
+<% end %>
